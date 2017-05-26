@@ -1,3 +1,22 @@
+1. 소스 자체의 수정 내용은 없습니다. 다만 아래 환경 맞춤을 수행
+
+  a. github에는 tensorflow 버젼이 0.12라고 했으나 실제로는 1.1에서 정상동작
+     >> 0.12에서 동작시 l2_reg_lambda=FLAGS.l2_reg_lambda 쪽에서 오류발생
+
+2. 수행한 모델은 CNN을 이용한 텍스트(영문) Classification 으로 학습 후 영화평론에 대해 해당 평론이 긍정(1.0)인지 부정(0.0)인지 판별함.
+
+ 
+
+3. 결과 
+
+  1) 모델학습 : ./train.py 
+
+  2) 모델 평가 : ./eval.py --eval_train --checkpoint_dir="./runs/1495784442/checkpoints/"
+
+  3)결과 파일 : prediction.csv  (해당파일은 github에 checkout 함.)
+
+
+
 **[This code belongs to the "Implementing a CNN for Text Classification in Tensorflow" blog post.](http://www.wildml.com/2015/12/implementing-a-cnn-for-text-classification-in-tensorflow/)**
 
 It is slightly simplified implementation of Kim's [Convolutional Neural Networks for Sentence Classification](http://arxiv.org/abs/1408.5882) paper in Tensorflow.
